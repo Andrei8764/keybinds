@@ -3,12 +3,19 @@
 # Discord: Andrei9876#6160
 
 import json
+import os.path
 
+file_exist2s = os.path.exists('.env')
+if file_exist2s == False:
+    config = {"dependency_installed": '', "debug_mode": ''}
+    json_object = json.dumps(config, indent = 3)
+    with open(".env", "w") as outfile:
+        outfile.write(json_object)
 def code():
     import pyautogui, pydirectinput
     from pynput import keyboard
     from time import sleep
-    import os.path, os
+    import os
 
     # Setup #
     file_exists = os.path.exists('config.json')
