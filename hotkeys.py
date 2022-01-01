@@ -51,26 +51,33 @@ def code():
             snaks_key = data["snaks_key"]
             armour_key = data["armour_key"]
             exit_key = data["exit_key"]
-
+        keydelay = 0.25
         def snaks():
             pydirectinput.keyDown('m')
             pydirectinput.keyUp('m')
+            sleep(0.120)
             for i in range(2):
                 pydirectinput.keyDown('down')
                 pydirectinput.keyUp('down')
+                sleep(keydelay)
             pydirectinput.keyDown('enter')
             pydirectinput.keyUp('enter')
+            sleep(keydelay)
             for i in range(4):
                 pydirectinput.keyDown('down')
                 pydirectinput.keyUp('down')
+                sleep(keydelay)
             pydirectinput.keyDown('enter')
             pydirectinput.keyUp('enter')
+            sleep(keydelay)
             for i in range(3):
                 pydirectinput.keyDown('enter')
                 pydirectinput.keyUp('enter')
+                sleep(keydelay)
             for i in range(3):
                 pydirectinput.keyDown('backspace')
                 pydirectinput.keyUp('backspace')
+                sleep(keydelay)
 
         def on_press(key):
             try:
