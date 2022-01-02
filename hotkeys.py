@@ -56,7 +56,7 @@ def code():
             pydirectinput.keyDown('m')
             pydirectinput.keyUp('m')
             sleep(0.120)
-            for i in range(2):
+            for i in range(3):
                 pydirectinput.keyDown('down')
                 pydirectinput.keyUp('down')
                 sleep(keydelay)
